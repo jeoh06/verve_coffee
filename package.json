@@ -1,0 +1,22 @@
+{
+  "name": "verve_coffee",
+  "version": "1.0.0",
+  "description": "This may come as a surprise, but it's about coffee",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o public/styles/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeoh06/verve_coffee.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeoh06/verve_coffee/issues"
+  },
+  "homepage": "https://github.com/jeoh06/verve_coffee#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
