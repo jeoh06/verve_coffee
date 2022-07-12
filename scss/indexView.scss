@@ -1,9 +1,9 @@
+@use 'presets';
+@use 'header';
+// @use 'footer';
+
+
 ///////VARIABLES////////
-
-$white: #fff;
-$black: rgb(63, 63, 63);
-$bluegreen: rgb(63, 129, 125);
-
 @mixin block ($color) {
 
     max-width: 70%;
