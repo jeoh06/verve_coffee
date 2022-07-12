@@ -1,0 +1,9 @@
+@import 'presets';
+
+nav {
+    display: flex;
+}
+
+nav img {
+    @extend %logo;
+}

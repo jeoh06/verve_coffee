@@ -1,0 +1,5 @@
+@import 'presets';
+
+footer img {
+   @extend %logo;
+}

@@ -1,2 +1,20 @@
-img {
-  height: 20rem; }
+nav img {
+  height: 4rem;
+  width: 4rem;
+}
+
+nav {
+  display: flex;
+}
+
+footer img {
+  height: 4rem;
+  width: 4rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=indexView.css.map */
