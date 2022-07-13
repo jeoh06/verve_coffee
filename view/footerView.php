@@ -1,6 +1,6 @@
 <footer>
-    <img src="./public/images/brand/logo.jpg" alt="verve qlogo">
-    <ul id="footer-menu">
+    <img src="./public/images/brand/logo.jpg" alt="verve logo">
+    <ul>
         <li>Home</li>
         <li>About Us</li>
         <li>Create Your Plan</li>

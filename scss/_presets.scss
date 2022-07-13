@@ -1,6 +1,6 @@
 // VARIABLES
 $white: #fff;
-$black: rgb(63, 63, 63);
+$black: rgb(20, 20, 20);
 $bluegreen: rgb(63, 129, 125);
 
 //EXTENDS
@@ -25,6 +25,30 @@ $bluegreen: rgb(63, 129, 125);
     
     text-align: center;
 
+}
+
+//Overlays text description on image links in mobile nav menu
+@mixin header-link {
+    position: relative;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    span {
+        width: 100%;
+        height: 3rem;
+        position: absolute;
+        left: 0;
+        bottom: 1.2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(20, 20, 20, 0.6);
+        color: gold;
+    }
 }
 
 @mixin flex {

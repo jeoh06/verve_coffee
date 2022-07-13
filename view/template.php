@@ -14,8 +14,13 @@
 <body>
     <?php 
     include('view/headerView.php');
-    echo $content;
+    ?>
+    <section id="main">
+   <?=$content?>
+    </section>
+    <?php 
     include('view/footerView.php');
     ?>
+    <script src="./public/js/header.js"></script>
 </body>
 </html>
