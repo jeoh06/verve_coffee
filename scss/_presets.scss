@@ -1,8 +1,45 @@
+// VARIABLES
 $white: #fff;
 $black: rgb(63, 63, 63);
 $bluegreen: rgb(63, 129, 125);
 
+//EXTENDS
 %logo {
     height: 4rem;
     width: 4rem;
 }
+
+//MIXINS
+@mixin block ($color) {
+
+    max-width: 70%;
+
+    background-color: $color;
+
+    border: solid 1px $white;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+    padding: 10%;
+    margin-top: 20px;
+    
+    text-align: center;
+
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between
+}
+
+@mixin flexcolumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin screen-min($min) { 
+    @media (min-width: $min) { 
+      @content 
+    } 
+};
