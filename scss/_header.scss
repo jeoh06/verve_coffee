@@ -1,16 +1,32 @@
-@use 'presets';
+@import 'presets';
 
-nav navbar {
-    display: flex;
+nav-web {
+    display: none;
 }
 
-navbar img {
-    height: 4rem;
-    width: 4rem;
+nav-bar {
+    @include flex;
+    width: 100vw;
+}
+
+nav-bar { 
+    * {
+        box-sizing: inherit;
+    
+        &:before,
+        &:after {
+            box-sizing: inherit;
+        }
+    }
+}
+
+nav-bar img {
+    @extend %logo;
 }
 
 .toggle {
-    display: block;
+    align-self: center;
+    margin: 0 1rem 0 0;
     cursor: pointer;
 
     input {
@@ -63,6 +79,7 @@ navbar img {
                         background: $black;
                         position: absolute;
                         -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
                         transition: transform .5s ease, border-radius .3s ease, background .4s ease;
                     }
 
@@ -81,21 +98,21 @@ navbar img {
             }
 
             svg {
-                display: block;
                 fill: none;
                 stroke: $black;
                 stroke-width: 3px;
                 width: 2rem;
-                height: 2.1rem;
+                height: 2.2rem;
                 stroke-linecap: round;
                 position: absolute;
-                left: 50%;
-                top: 50%;
+                left: 80%;
+                top: 80%;
                 margin: -22px 0 0 -22px;
                 stroke-dasharray: 0 82.801 11 82.801;
                 stroke-dashoffset: 82.801;
                 transform-origin: 50% 50%;
                 -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
                 transform: scale(1);
                 transition: stroke-dashoffset .5s ease, stroke-dasharray .6s ease, transform .5s ease, stroke .4s ease;
 
@@ -149,19 +166,5 @@ navbar img {
                 }
             }
         }
-    }
-}
-
-html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-}
-
-* {
-    box-sizing: inherit;
-
-    &:before,
-    &:after {
-        box-sizing: inherit;
     }
 }
