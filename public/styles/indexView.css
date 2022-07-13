@@ -3,21 +3,73 @@ nav-bar img {
   width: 4rem;
 }
 
+header {
+  z-index: 999;
+}
+
+nav {
+  width: 100vw;
+}
+
 nav-web {
   display: none;
 }
 
 nav-bar {
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
+  position: fixed;
+  width: 100%;
+  height: 4rem;
 }
-
 nav-bar * {
   box-sizing: inherit;
 }
 nav-bar *:before, nav-bar *:after {
   box-sizing: inherit;
+}
+.plsWork {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+}
+
+hamburger-content {
+  width: 100vw;
+  height: calc(100vh - 4rem);
+  position: absolute;
+  bottom: 100%;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+hamburger-content #mobile-menu {
+  margin: 0 1.5rem;
+}
+hamburger-content #mobile-menu li {
+  display: block;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgb(20, 20, 20);
+  font-size: 2.5rem;
+}
+hamburger-content div {
+  position: relative;
+  margin: 0 1.5rem 1.5rem 1.5rem;
+}
+hamburger-content div img {
+  width: 100%;
+  height: 100%;
+}
+hamburger-content div span {
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  left: 0;
+  bottom: 1.2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(20, 20, 20, 0.6);
+  color: gold;
 }
 
 .toggle {
@@ -65,7 +117,7 @@ nav-bar *:before, nav-bar *:after {
   width: 47%;
   height: 2px;
   border-radius: 1px;
-  background: rgb(63, 63, 63);
+  background: rgb(20, 20, 20);
   position: absolute;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -83,7 +135,7 @@ nav-bar *:before, nav-bar *:after {
 }
 .toggle input + div svg {
   fill: none;
-  stroke: rgb(63, 63, 63);
+  stroke: rgb(20, 20, 20);
   stroke-width: 3px;
   width: 2rem;
   height: 2.2rem;
@@ -107,7 +159,7 @@ nav-bar *:before, nav-bar *:after {
   transform: rotate(90deg);
 }
 .toggle input:checked + div div span:before, .toggle input:checked + div div span:after {
-  background: rgb(63, 63, 63);
+  background: rgb(20, 20, 20);
 }
 .toggle input:checked + div div span:first-child:before {
   transform: rotate(45deg) translate(2.2px, -3px) scaleX(1.05);
@@ -125,12 +177,36 @@ nav-bar *:before, nav-bar *:after {
   stroke-dashoffset: 62;
   stroke-dasharray: 0 82.801 62 82.801;
   transform: rotate(90deg);
-  stroke: rgb(63, 63, 63);
+  stroke: rgb(20, 20, 20);
 }
 .toggle input:checked + div svg:nth-child(3) {
   transform: rotate(270deg);
 }
 
+.slideIn {
+  animation: slideIn 0.5s linear forwards;
+}
+
+.slideOut {
+  animation: slideOut 0.5s linear forwards;
+}
+
+@keyframes slideIn {
+  from {
+    bottom: 100%;
+  }
+  to {
+    bottom: calc(-100vh + 4rem);
+  }
+}
+@keyframes slideOut {
+  from {
+    bottom: calc(-100vh + 4rem);
+  }
+  to {
+    bottom: 100%;
+  }
+}
 footer img {
   height: 4rem;
   width: 4rem;
@@ -142,9 +218,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
@@ -154,6 +227,8 @@ body {
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -168,6 +243,12 @@ button {
   text-align: center;
   color: white;
   font-size: 100%;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title_block {
@@ -196,7 +277,7 @@ button {
   padding: 10%;
   margin-top: 20px;
   text-align: center;
-  color: rgb(63, 63, 63);
+  color: rgb(20, 20, 20);
 }
 @media (min-width: 576px) {
   .products {
@@ -214,7 +295,7 @@ button {
 
 .aboutUs {
   max-width: 70%;
-  background-color: rgb(63, 63, 63);
+  background-color: rgb(20, 20, 20);
   border: solid 1px #fff;
   border-radius: 10px;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
